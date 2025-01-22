@@ -1,0 +1,62 @@
+@use 'variables';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/Fundo.png);
+    background-repeat: repeat;
+    background-size:auto; 
+    position: relative;
+    
+
+    .container {
+        position: relative;
+    }
+
+
+    &__text {
+        position: absolute; /* Posiciona o texto em relação ao contêiner */
+        top: 9%; /* Ajuste a posição do texto verticalmente */
+        left: 50%; /* Ajuste a posição do texto horizontalmente */
+        transform: translate(-50%, -50%); /* Centraliza o texto */
+        color: rgb(255, 0, 0); /* Cor do texto */
+        font-size: 32px; /* Tamanho da fonte */
+        text-align: center;
+        text-decoration-style: solid;
+        background-color: white;
+        
+        &__info {
+            position: absolute; /* Posiciona o texto em relação ao contêiner */
+            top: 95%; /* Ajuste a posição do texto verticalmente */
+            left: 50%; /* Ajuste a posição do texto horizontalmente */
+            transform: translate(-50%, -50%); /* Centraliza o texto */
+            color: rgb(255, 0, 0); /* Cor do texto */
+            font-size: 32px; /* Tamanho da fonte */
+            text-align: center;
+            text-decoration-style: solid;
+            background-color: white;
+          
+            max-width: 100%;
+        }
+    }
+
+    &__logo {
+        margin: 0 auto;
+        height: 600px;
+        width: 50%;
+        display: block;
+    }
+
+    @media (max-width:640px) {  //DIMINUIR O TAMANHO DAS IMAGENS E TEXTO NO CELULAR
+        .hero__logo {
+            width: 100%; /* A imagem vai ocupar toda a largura disponível */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        
+
+        .hero__text {
+            width: 100%; /* A imagem vai ocupar toda a largura disponível */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+    }
+}
